@@ -133,31 +133,78 @@ Customer Payment (₹1000)
 - **React Native HTML to PDF** - Certificate generation
 - **Notifee** - Local notifications
 
+## ⚠️ IMPORTANT: Native Setup Required
+
+**The project currently has complete source code but is missing native platform folders (`android/` and `ios/`).**
+
+### Current Status
+✅ **Complete:**
+- All TypeScript source code (10 screens)
+- Redux state management (4 slices)
+- Data models (9 models)
+- Firebase services
+- Navigation setup
+- Complete documentation
+
+❌ **Missing:**
+- `android/` folder - Required to run on Android
+- `ios/` folder - Required to run on iOS
+
+### How to Set Up
+
+#### Quick Setup (Recommended)
+```bash
+# Make script executable
+chmod +x setup-native.sh
+
+# Run setup
+./setup-native.sh
+```
+
+#### Manual Setup
+See **[CURRENT_PROJECT_STATUS.md](./CURRENT_PROJECT_STATUS.md)** for detailed instructions.
+
+#### Why This Is Needed
+React Native requires native platform code to run. Without `android/` and `ios/` folders:
+- ❌ Cannot compile the app
+- ❌ Cannot run on devices/emulators
+- ❌ Native modules won't work (Firebase, Maps, etc.)
+
+📖 **Read [CURRENT_PROJECT_STATUS.md](./CURRENT_PROJECT_STATUS.md) for complete explanation.**
+
 ## 📋 Implementation Status
 
-### Phase 1: Core Documentation ✅
+### Phase 1: Core Development ✅
 - [x] Documentation structure created
 - [x] Franchise model designed
-- [x] Data models defined
-- [x] API specifications documented
+- [x] Data models defined (9 models)
+- [x] Redux state management implemented
+- [x] 10 screens implemented (Auth, Dashboard, Agent, Customer, Franchise)
+- [x] Firebase helper functions
+- [x] Navigation structure
+- [x] Complete application flow
 
-### Phase 2: Backend Development (In Progress)
+### Phase 2: Native Setup (Current)
+- [ ] Initialize `android/` folder → **See setup-native.sh**
+- [ ] Initialize `ios/` folder → **See setup-native.sh**
+- [ ] Configure Firebase native modules
+- [ ] Configure permissions
+- [ ] Test on emulators
+
+### Phase 3: Integration & Testing (Upcoming)
 - [ ] Firebase collections setup
-- [ ] Cloud Functions implementation
-- [ ] Security rules configuration
-- [ ] API development
-
-### Phase 3: Frontend Development (Upcoming)
-- [ ] Redux state management
-- [ ] New screens implementation
-- [ ] Component development
-- [ ] Navigation updates
-
-### Phase 4: Testing & Deployment (Upcoming)
+- [ ] Motor registration feature
+- [ ] Payment integration (Razorpay)
+- [ ] Certificate generation
+- [ ] Commission calculations
 - [ ] Unit testing
 - [ ] Integration testing
+
+### Phase 4: Deployment (Upcoming)
+- [ ] Production build (Android)
+- [ ] Production build (iOS)
+- [ ] App store submission
 - [ ] User acceptance testing
-- [ ] Production deployment
 
 ## 🎯 Getting Started
 
