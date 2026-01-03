@@ -152,11 +152,14 @@ Customer Payment (₹1000)
 
 #### Step 1: Install Dependencies
 ```bash
-npm install
+# Important: Use --legacy-peer-deps flag for React Native
+npm install --legacy-peer-deps
 
 # For iOS (Mac only)
 cd ios && pod install && cd ..
 ```
+
+**Note**: Dependencies have been fixed for React Native 0.73.2 compatibility. See [DEPENDENCY_FIX.md](./DEPENDENCY_FIX.md) for details.
 
 #### Step 2: Configure Firebase
 - Download `google-services.json` → Place in `android/app/`
